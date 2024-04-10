@@ -1,0 +1,9 @@
+[package]
+name = "macroquad-egui"
+version = "0.1.0"
+edition = "2021"
+
+[dependencies]
+egui = "0.21.0"
+egui-macroquad = "0.15"
+macroquad = { version = "0.3.26", default-features = false }
