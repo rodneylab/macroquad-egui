@@ -23,7 +23,7 @@ jobs:
           egress-policy: audit
           disable-telemetry: true
       - name: Install Linux Dependencies
-        run: sudo apt-get update
+        run: sudo apt-get update && sudo apt-get install pkg-config libx11-dev libxi-dev libgl1-mesa-dev libasound2-dev
       - uses: actions/checkout@9bb56186c3b09b4f86b1c65136769dd318469633 # v4.1.2
       - uses: dtolnay/rust-toolchain@4f366e621dc8fa63f557ca04b8f4361824a35a45 # stable
       - name: Run tests
@@ -76,6 +76,8 @@ jobs:
     steps:
       - uses: actions/checkout@9bb56186c3b09b4f86b1c65136769dd318469633 # v4.1.2
       - name: Install ${{ matrix.msrv }}
+      - name: Install Linux Dependencies
+        run: sudo apt-get update && sudo apt-get install pkg-config libx11-dev libxi-dev libgl1-mesa-dev libasound2-dev
         uses: dtolnay/rust-toolchain@4f366e621dc8fa63f557ca04b8f4361824a35a45 # stable
         with:
           toolchain: ${{ matrix.msrv }}
@@ -91,7 +93,7 @@ jobs:
           egress-policy: audit
           disable-telemetry: true
       - name: Install Linux Dependencies
-        run: sudo apt-get update
+        run: sudo apt-get update && sudo apt-get install pkg-config libx11-dev libxi-dev libgl1-mesa-dev libasound2-dev
       - name: Checkout repository
         uses: actions/checkout@9bb56186c3b09b4f86b1c65136769dd318469633 # v4.1.2
       - uses: dtolnay/rust-toolchain@4f366e621dc8fa63f557ca04b8f4361824a35a45 # stable
