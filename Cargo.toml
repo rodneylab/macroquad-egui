@@ -2,6 +2,8 @@
 name = "macroquad-egui"
 version = "0.1.0"
 edition = "2021"
+# egui 0.27.2 requires MSRV 1.72
+rust-version = "1.72"
 
 [dependencies]
 egui = "0.21.0"
