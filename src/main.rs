@@ -10,7 +10,7 @@ use macroquad::{
     window::{clear_background, next_frame, Conf},
 };
 
-pub const CARROT_ORRANGE: Color = Color {
+pub const CARROT_ORANGE: Color = Color {
     r: 247.0 / 255.0,
     g: 152.0 / 255.0,
     b: 36.0 / 255.0,
@@ -153,12 +153,7 @@ async fn main() {
             });
         });
 
-        draw_circle(
-            ball.position.x,
-            ball.position.y,
-            ball.radius,
-            CARROT_ORRANGE,
-        );
+        draw_circle(ball.position.x, ball.position.y, ball.radius, CARROT_ORANGE);
 
         egui_macroquad::draw();
 
