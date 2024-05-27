@@ -8,4 +8,4 @@ rust-version = "1.73"
 [dependencies]
 egui = "0.21.0"
 egui-macroquad = "0.15"
-macroquad = { version = "0.3.26", default-features = false }
+macroquad = { version = "0.4.6", default-features = false }
