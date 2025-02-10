@@ -6,6 +6,6 @@ edition = "2021"
 rust-version = "1.73"
 
 [dependencies]
-egui = "0.21.0"
+egui = "0.31.0"
 egui-macroquad = "0.15"
 macroquad = { version = "0.3.26", default-features = false }
